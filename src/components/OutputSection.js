@@ -19,7 +19,7 @@ function OutputSection({ tipDisplay, totalDisplay, handleReset }) {
         <div className="output-value">${totalDisplay}</div>
       </div>
 
-      <button className="reset-button" onclick={handleReset}>
+      <button className="reset-button" onClick={handleReset}>
         Reset
       </button>
     </div>
