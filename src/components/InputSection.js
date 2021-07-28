@@ -21,24 +21,28 @@ function InputSection() {
         Bill
       </label>
       <br />
-      <input
-        name="billInput"
-        className="text-input bill-amount-text-input"
-        value={billInput}
-        onChange={handleBillInputChange}
-      />
+      <div className="bill-amount-text-input">
+        <input
+          name="billInput"
+          className="text-input"
+          value={billInput}
+          onChange={handleBillInputChange}
+        />
+      </div>
       <div>insert percentage options buttons here</div>
       <div>insert custom percentage button here</div>
       <label className="input-label" htmlFor="numPeopleInput">
         Number of People
       </label>
       <br />
-      <input
-        className="text-input num-people-text-input"
-        name="numPeopleInput"
-        value={numPeopleInput}
-        onChange={handleNumPeopleInputChange}
-      />
+      <div className="num-people-text-input">
+        <input
+          className="text-input"
+          name="numPeopleInput"
+          value={numPeopleInput}
+          onChange={handleNumPeopleInputChange}
+        />
+      </div>
     </div>
   );
 }
