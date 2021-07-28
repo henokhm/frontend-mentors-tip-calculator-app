@@ -1,5 +1,29 @@
 .input-section {
-  border: blue solid 3px;
-  padding: 3em;
-  margin: 1em;
+  padding: 1em;
+}
+
+.input-label {
+  color: hsl(186, 14%, 43%);
+  display: block;
+  margin-top: 1.5em;
+  font-weight: 700;
+}
+
+.text-input {
+  background-color: hsl(202, 50%, 97%);
+  width: 100%;
+  padding: 0.25em 0.5em;
+  text-align: right;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+}
+
+.bill-amount-text-input {
+}
+
+.num-people-text-input {
 }
