@@ -1,9 +1,12 @@
 import { useState } from "react";
+
+import PercentageOptions from "./PercentageOptions";
 import "./InputSection.css";
 
 function InputSection() {
   const [billInput, setBillInput] = useState("");
   const [numPeopleInput, setNumPeopleInput] = useState("");
+  const [selectedPercentage, setSelectedPercentage] = useState(10);
 
   const handleBillInputChange = (event) => {
     // TODO: Error handling
@@ -29,8 +32,10 @@ function InputSection() {
           onChange={handleBillInputChange}
         />
       </div>
-      <div>insert percentage options buttons here</div>
-      <div>insert custom percentage button here</div>
+      <PercentageOptions
+        selectedPercentage={selectedPercentage}
+        setSelectedPercentage={setSelectedPercentage}
+      />
       <label className="input-label" htmlFor="numPeopleInput">
         Number of People
       </label>
