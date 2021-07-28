@@ -26,7 +26,7 @@ function InputSection() {
       <br />
       <div className="bill-amount-text-input">
         <input
-          name="billInput"
+          id="billInput"
           className="text-input"
           value={billInput}
           onChange={handleBillInputChange}
@@ -43,7 +43,7 @@ function InputSection() {
       <div className="num-people-text-input">
         <input
           className="text-input"
-          name="numPeopleInput"
+          id="numPeopleInput"
           value={numPeopleInput}
           onChange={handleNumPeopleInputChange}
         />
