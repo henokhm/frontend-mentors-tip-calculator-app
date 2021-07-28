@@ -1,9 +1,13 @@
-import './App.css';
+import "./App.css";
+
+import InputSection from "./components/InputSection";
+import OutputSection from "./components/OutputSection";
 
 function App() {
   return (
     <div className="App">
-      Hello world!
+      <InputSection />
+      <OutputSection />
     </div>
   );
 }
