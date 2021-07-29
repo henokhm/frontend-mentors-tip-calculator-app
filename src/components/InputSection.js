@@ -1,13 +1,14 @@
-import { useState } from "react";
-
 import PercentageOptions from "./PercentageOptions";
 import "./InputSection.css";
 
-function InputSection() {
-  const [billInput, setBillInput] = useState("");
-  const [numPeopleInput, setNumPeopleInput] = useState("");
-  const [selectedPercentage, setSelectedPercentage] = useState(undefined);
-
+function InputSection({
+  billInput,
+  setBillInput,
+  numPeopleInput,
+  setNumPeopleInput,
+  selectedPercentage,
+  setSelectedPercentage,
+}) {
   const handleBillInputChange = (event) => {
     // TODO: Error handling
     setBillInput(event.target.value);
