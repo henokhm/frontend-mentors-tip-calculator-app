@@ -1,0 +1,25 @@
+.custom-button {
+  display: inline-block;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  width: 80px;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.5em 1.25em;
+  margin: 0.5em;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+}
+
+.custom-percentage-input {
+  background-color: hsl(202, 50%, 97%);
+  width: 80px;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  color: hsl(183, 100%, 15%);
+  font-size: 1em;
+  font-weight: 700;
+}

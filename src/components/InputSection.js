@@ -6,7 +6,7 @@ import "./InputSection.css";
 function InputSection() {
   const [billInput, setBillInput] = useState("");
   const [numPeopleInput, setNumPeopleInput] = useState("");
-  const [selectedPercentage, setSelectedPercentage] = useState(10);
+  const [selectedPercentage, setSelectedPercentage] = useState(undefined);
 
   const handleBillInputChange = (event) => {
     // TODO: Error handling
@@ -47,6 +47,12 @@ function InputSection() {
           value={numPeopleInput}
           onChange={handleNumPeopleInputChange}
         />
+      </div>
+
+      <div className="temp">
+        <p>Bill input is {billInput}</p>
+        <p>Number of people input is{numPeopleInput}</p>
+        <p>Selected percentage is {selectedPercentage}</p>
       </div>
     </div>
   );
