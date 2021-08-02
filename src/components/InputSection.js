@@ -8,31 +8,20 @@ function InputSection({
   setNumPeopleInput,
   selectedPercentage,
   setSelectedPercentage,
-  showBillInputError,
-  showNumPeopleInputError,
-  validateBillInput,
-  validateNumPeopleInput,
+  calculateTip,
 }) {
   return (
     <div className="input-section">
       <label className="input-label" htmlFor="billInput">
         Bill
       </label>
-      {showBillInputError ? (
-        <span className="input-error">
-          Please enter a non-zero valid amount.
-        </span>
-      ) : (
-        ""
-      )}
       <div className="bill-amount-text-input">
         <input
           id="billInput"
           className="text-input"
           value={billInput}
           onChange={(event) => setBillInput(event.target.value)}
-          onBlur={validateBillInput}
-          style={showBillInputError ? { border: "#f00 solid 2px" } : {}}
+          onBlur={calculateTip}
         />
       </div>
       <PercentageOptions
@@ -42,21 +31,13 @@ function InputSection({
       <label className="input-label" htmlFor="numPeopleInput">
         Number of People
       </label>
-      {showNumPeopleInputError ? (
-        <span className="input-error">
-          Please enter a non-zero integer number.
-        </span>
-      ) : (
-        ""
-      )}
       <div className="num-people-text-input">
         <input
           className="text-input"
           id="numPeopleInput"
           value={numPeopleInput}
           onChange={(event) => setNumPeopleInput(event.target.value)}
-          onBlur={validateNumPeopleInput}
-          style={showNumPeopleInputError ? { border: "#f00 solid 2px" } : {}}
+          onBlur={calculateTip}
         />
       </div>
     </div>

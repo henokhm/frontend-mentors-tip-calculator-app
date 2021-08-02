@@ -11,46 +11,15 @@ function App() {
   const [selectedPercentage, setSelectedPercentage] = useState(undefined);
   const [tipDisplay, setTipDisplay] = useState(0);
   const [totalDisplay, setTotalDisplay] = useState(0);
-  const [showBillInputError, setShowBillInputError] = useState(false);
-  const [showNumPeopleInputError, setShowNumPeopleInputError] = useState(false);
-
-  const validateBillInput = () => {
-    const regEx = /^\d+(\.\d+)?$/;
-    // matches only strings where each char is a digit and there is at
-    // most one decimal point
-    if (billInput !== "" && billInput.match(regEx)) {
-      setShowBillInputError(false);
-      setBillInput(parseFloat(billInput));
-      calculateTip();
-    } else {
-      resetOutPut();
-      setShowBillInputError(true);
-    }
-  };
-
-  const validateNumPeopleInput = () => {
-    const regEx = /^\d+$/;
-    // matches only strings where each char is a digit
-    if (
-      numPeopleInput !== "" &&
-      numPeopleInput.match(regEx) &&
-      parseInt(numPeopleInput) > 0
-    ) {
-      setShowNumPeopleInputError(false);
-      setNumPeopleInput(parseInt(numPeopleInput));
-      calculateTip();
-    } else {
-      resetOutPut();
-      setShowNumPeopleInputError(true);
-    }
-  };
 
   const calculateTip = () => {
-    console.log("calculate tip was called");
-    if (!showBillInputError && !showNumPeopleInputError) {
-      const tipAmount = (billInput * selectedPercentage) / 100;
+    const tipAmount = (billInput * selectedPercentage) / 100;
+    const tipPerPerson = tipAmount / numPeopleInput;
+    const totalAmount = parseInt(billInput) + tipAmount;
+    const totalPerPerson = totalAmount / numPeopleInput;
+
+    if (!isNaN(tipPerPerson) && !isNaN(totalPerPerson)) {
       setTipDisplay(tipAmount / numPeopleInput);
-      const totalAmount = billInput + tipAmount;
       setTotalDisplay(totalAmount / numPeopleInput);
     }
   };
@@ -60,13 +29,6 @@ function App() {
     setBillInput("");
     setNumPeopleInput("");
     setSelectedPercentage(undefined);
-    setTipDisplay(0);
-    setTotalDisplay(0);
-    setShowBillInputError(false);
-    setShowNumPeopleInputError(false);
-  };
-
-  const resetOutPut = () => {
     setTipDisplay(0);
     setTotalDisplay(0);
   };
@@ -82,10 +44,7 @@ function App() {
           setNumPeopleInput={setNumPeopleInput}
           selectedPercentage={selectedPercentage}
           setSelectedPercentage={setSelectedPercentage}
-          showBillInputError={showBillInputError}
-          showNumPeopleInputError={showNumPeopleInputError}
-          validateBillInput={validateBillInput}
-          validateNumPeopleInput={validateNumPeopleInput}
+          calculateTip={calculateTip}
         />
         <div className="temp">
           <p>Bill input is {billInput}</p>
