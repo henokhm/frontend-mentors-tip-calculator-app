@@ -8,29 +8,31 @@ function InputSection({
   setNumPeopleInput,
   selectedPercentage,
   setSelectedPercentage,
+  showBillInputError,
+  showNumPeopleInputError,
+  validateBillInput,
+  validateNumPeopleInput,
 }) {
-  const handleBillInputChange = (event) => {
-    // TODO: Error handling
-    setBillInput(event.target.value);
-  };
-
-  const handleNumPeopleInputChange = (event) => {
-    // TODO: Error handling
-    setNumPeopleInput(event.target.value);
-  };
-
   return (
     <div className="input-section">
       <label className="input-label" htmlFor="billInput">
         Bill
       </label>
-      <br />
+      {showBillInputError ? (
+        <span className="input-error">
+          Please enter a non-zero valid amount.
+        </span>
+      ) : (
+        ""
+      )}
       <div className="bill-amount-text-input">
         <input
           id="billInput"
           className="text-input"
           value={billInput}
-          onChange={handleBillInputChange}
+          onChange={(event) => setBillInput(event.target.value)}
+          onBlur={validateBillInput}
+          style={showBillInputError ? { border: "#f00 solid 2px" } : {}}
         />
       </div>
       <PercentageOptions
@@ -40,20 +42,22 @@ function InputSection({
       <label className="input-label" htmlFor="numPeopleInput">
         Number of People
       </label>
-      <br />
+      {showNumPeopleInputError ? (
+        <span className="input-error">
+          Please enter a non-zero integer number.
+        </span>
+      ) : (
+        ""
+      )}
       <div className="num-people-text-input">
         <input
           className="text-input"
           id="numPeopleInput"
           value={numPeopleInput}
-          onChange={handleNumPeopleInputChange}
+          onChange={(event) => setNumPeopleInput(event.target.value)}
+          onBlur={validateNumPeopleInput}
+          style={showNumPeopleInputError ? { border: "#f00 solid 2px" } : {}}
         />
-      </div>
-
-      <div className="temp">
-        <p>Bill input is {billInput}</p>
-        <p>Number of people input is{numPeopleInput}</p>
-        <p>Selected percentage is {selectedPercentage}</p>
       </div>
     </div>
   );

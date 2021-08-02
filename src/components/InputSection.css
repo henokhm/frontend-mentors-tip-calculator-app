@@ -22,6 +22,10 @@
   color: hsl(183, 100%, 15%);
 }
 
+.bill-amount-text-input {
+  display: flex;
+}
+
 .bill-amount-text-input::before {
   content: url("../images/icon-dollar.svg");
   position: absolute;
@@ -42,4 +46,8 @@
   border: red solid 3px;
   padding: 1em;
   margin-top: 2em;
+}
+
+.input-error {
+  color: red;
 }
