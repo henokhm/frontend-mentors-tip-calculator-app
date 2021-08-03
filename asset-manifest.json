@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/frontend-mentors-tip-calculator-app/static/css/main.15e9ec11.chunk.css",
-    "main.js": "/frontend-mentors-tip-calculator-app/static/js/main.5e7b4be8.chunk.js",
-    "main.js.map": "/frontend-mentors-tip-calculator-app/static/js/main.5e7b4be8.chunk.js.map",
+    "main.css": "/frontend-mentors-tip-calculator-app/static/css/main.bc73fdf6.chunk.css",
+    "main.js": "/frontend-mentors-tip-calculator-app/static/js/main.2cba5d57.chunk.js",
+    "main.js.map": "/frontend-mentors-tip-calculator-app/static/js/main.2cba5d57.chunk.js.map",
     "runtime-main.js": "/frontend-mentors-tip-calculator-app/static/js/runtime-main.33d6c8c8.js",
     "runtime-main.js.map": "/frontend-mentors-tip-calculator-app/static/js/runtime-main.33d6c8c8.js.map",
     "static/js/2.9edb806b.chunk.js": "/frontend-mentors-tip-calculator-app/static/js/2.9edb806b.chunk.js",
     "static/js/2.9edb806b.chunk.js.map": "/frontend-mentors-tip-calculator-app/static/js/2.9edb806b.chunk.js.map",
     "index.html": "/frontend-mentors-tip-calculator-app/index.html",
-    "static/css/main.15e9ec11.chunk.css.map": "/frontend-mentors-tip-calculator-app/static/css/main.15e9ec11.chunk.css.map",
+    "static/css/main.bc73fdf6.chunk.css.map": "/frontend-mentors-tip-calculator-app/static/css/main.bc73fdf6.chunk.css.map",
     "static/js/2.9edb806b.chunk.js.LICENSE.txt": "/frontend-mentors-tip-calculator-app/static/js/2.9edb806b.chunk.js.LICENSE.txt",
     "static/media/InputSection.css": "/frontend-mentors-tip-calculator-app/static/media/icon-person.65bfd204.svg",
     "static/media/logo.3cc0528b.svg": "/frontend-mentors-tip-calculator-app/static/media/logo.3cc0528b.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.33d6c8c8.js",
     "static/js/2.9edb806b.chunk.js",
-    "static/css/main.15e9ec11.chunk.css",
-    "static/js/main.5e7b4be8.chunk.js"
+    "static/css/main.bc73fdf6.chunk.css",
+    "static/js/main.2cba5d57.chunk.js"
   ]
 }
