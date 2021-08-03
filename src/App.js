@@ -46,11 +46,6 @@ function App() {
           setSelectedPercentage={setSelectedPercentage}
           calculateTip={calculateTip}
         />
-        <div className="temp">
-          <p>Bill input is {billInput}</p>
-          <p>Number of people input is{numPeopleInput}</p>
-          <p>Selected percentage is {selectedPercentage}</p>
-        </div>
         <OutputSection
           tipDisplay={tipDisplay.toFixed(2)}
           totalDisplay={totalDisplay.toFixed(2)}

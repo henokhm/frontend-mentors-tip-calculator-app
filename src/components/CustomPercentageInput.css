@@ -1,6 +1,6 @@
 .custom-button {
   display: inline-block;
-  background-color: hsl(183, 100%, 15%);
+  background-color: hsl(202, 50%, 97%);
   border: none;
   width: 80px;
   text-align: center;
@@ -8,7 +8,7 @@
   padding: 0.5em 1.25em;
   margin: 0.5em;
   border-radius: 5px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(176, 15%, 39%);
 }
 
 .custom-percentage-input {

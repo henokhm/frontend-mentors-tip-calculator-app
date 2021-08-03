@@ -1,10 +1,11 @@
+import { useState } from "react";
+
 import "./CustomPercentageInput.css";
 
-function CustomPercentageInput({
-  userWillEnterCustomPercentage,
-  setUserWillEnterCustomPercentage,
-  setSelectedPercentage,
-}) {
+function CustomPercentageInput({ setSelectedPercentage }) {
+  const [userWillEnterCustomPercentage, setUserWillEnterCustomPercentage] =
+    useState(false);
+
   const display = userWillEnterCustomPercentage ? (
     <input
       className="custom-percentage-input"

@@ -1,6 +1,9 @@
 .App {
   background-color: hsl(185, 41%, 84%);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -11,8 +14,19 @@
 }
 
 .container {
+  width: auto;
   background-color: hsl(0, 0%, 100%);
   height: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    max-width: 720px;
+    height: auto;
+  }
 }

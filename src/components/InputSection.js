@@ -26,7 +26,11 @@ function InputSection({
       </div>
       <PercentageOptions
         selectedPercentage={selectedPercentage}
-        setSelectedPercentage={setSelectedPercentage}
+        setSelectedPercentage={(value) => {
+          setSelectedPercentage(value);
+          console.log(selectedPercentage);
+          calculateTip();
+        }}
       />
       <label className="input-label" htmlFor="numPeopleInput">
         Number of People
