@@ -8,7 +8,6 @@ function InputSection({
   setNumPeopleInput,
   selectedPercentage,
   setSelectedPercentage,
-  calculateTip,
 }) {
   return (
     <div className="input-section">
@@ -21,16 +20,11 @@ function InputSection({
           className="text-input"
           value={billInput}
           onChange={(event) => setBillInput(event.target.value)}
-          onBlur={calculateTip}
         />
       </div>
       <PercentageOptions
         selectedPercentage={selectedPercentage}
-        setSelectedPercentage={(value) => {
-          setSelectedPercentage(value);
-          console.log(selectedPercentage);
-          calculateTip();
-        }}
+        setSelectedPercentage={(value) => setSelectedPercentage(value)}
       />
       <label className="input-label" htmlFor="numPeopleInput">
         Number of People
@@ -41,7 +35,6 @@ function InputSection({
           id="numPeopleInput"
           value={numPeopleInput}
           onChange={(event) => setNumPeopleInput(event.target.value)}
-          onBlur={calculateTip}
         />
       </div>
     </div>

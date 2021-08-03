@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 import SplitterLogo from "./images/logo.svg";
@@ -12,7 +12,7 @@ function App() {
   const [tipDisplay, setTipDisplay] = useState(0);
   const [totalDisplay, setTotalDisplay] = useState(0);
 
-  const calculateTip = () => {
+  useEffect(() => {
     const tipAmount = (billInput * selectedPercentage) / 100;
     const tipPerPerson = tipAmount / numPeopleInput;
     const totalAmount = parseInt(billInput) + tipAmount;
@@ -22,7 +22,7 @@ function App() {
       setTipDisplay(tipAmount / numPeopleInput);
       setTotalDisplay(totalAmount / numPeopleInput);
     }
-  };
+  }, [billInput, numPeopleInput, selectedPercentage]);
 
   const handleReset = () => {
     console.log("reset called");
@@ -44,7 +44,6 @@ function App() {
           setNumPeopleInput={setNumPeopleInput}
           selectedPercentage={selectedPercentage}
           setSelectedPercentage={setSelectedPercentage}
-          calculateTip={calculateTip}
         />
         <OutputSection
           tipDisplay={tipDisplay.toFixed(2)}
